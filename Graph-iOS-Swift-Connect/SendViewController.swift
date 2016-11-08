@@ -28,7 +28,7 @@ class SendViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         MSGraphClient.setAuthenticationProvider(authentication.authenticationProvider)
-        
+		print("Access Token:\(NXOAuth2AuthenticationProvider.sharedAuthProvider().userAccount.accessToken.accessToken)")
         getUserInfo()
         initUI()
         
